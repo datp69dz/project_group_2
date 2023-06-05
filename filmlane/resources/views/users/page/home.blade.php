@@ -1,5 +1,5 @@
 <!-- resources/views/movies/index.blade.php -->
-@extends('fontend.layout.app')
+@extends('users.layout.app')
 @section('content')
 
 @if(isset($message))
@@ -31,7 +31,7 @@
                         <div class="row">
                             <div class="col-lg-3 col-md-6 col-sm-6">
                                 <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="fontend/img/popular/movie-1.png">
+                                    <div class="product__item__pic set-bg" data-setbg="users/img/popular/movie-1.png">
                                         <div class="ep">HD</div>
                                         <div class="comment"><i class="fa fa-comments"></i> 11</div>
                                         <div class="view"><i class="fa fa-eye"></i> 9141</div>
@@ -47,7 +47,7 @@
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-6">
                                 <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="fontend/img/popular/movie-2.png">
+                                    <div class="product__item__pic set-bg" data-setbg="users/img/popular/movie-2.png">
                                         <div class="ep">HD</div>
                                         <div class="comment"><i class="fa fa-comments"></i> 11</div>
                                         <div class="view"><i class="fa fa-eye"></i> 9141</div>
@@ -63,7 +63,7 @@
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-6">
                                 <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="fontend/img/popular/movie-3.png">
+                                    <div class="product__item__pic set-bg" data-setbg="users/img/popular/movie-3.png">
                                         <div class="ep">HD</div>
                                         <div class="comment"><i class="fa fa-comments"></i> 11</div>
                                         <div class="view"><i class="fa fa-eye"></i> 9141</div>
@@ -79,7 +79,7 @@
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-6">
                                 <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="fontend/img/popular/movie-4.png">
+                                    <div class="product__item__pic set-bg" data-setbg="users/img/popular/movie-4.png">
                                         <div class="ep">HD</div>
                                         <div class="comment"><i class="fa fa-comments"></i> 11</div>
                                         <div class="view"><i class="fa fa-eye"></i> 9141</div>
@@ -95,7 +95,7 @@
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-6">
                                 <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="fontend/img/popular/movie-5.png">
+                                    <div class="product__item__pic set-bg" data-setbg="users/img/popular/movie-5.png">
                                         <div class="ep">HD</div>
                                         <div class="comment"><i class="fa fa-comments"></i> 11</div>
                                         <div class="view"><i class="fa fa-eye"></i> 9141</div>
@@ -111,7 +111,7 @@
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-6">
                                 <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="fontend/img/popular/movie-6.png">
+                                    <div class="product__item__pic set-bg" data-setbg="users/img/popular/movie-6.png">
                                         <div class="ep">HD</div>
                                         <div class="comment"><i class="fa fa-comments"></i> 11</div>
                                         <div class="view"><i class="fa fa-eye"></i> 9141</div>
@@ -127,7 +127,7 @@
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-6">
                                 <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="fontend/img/popular/movie-7.png">
+                                    <div class="product__item__pic set-bg" data-setbg="users/img/popular/movie-7.png">
                                         <div class="ep">HD</div>
                                         <div class="comment"><i class="fa fa-comments"></i> 11</div>
                                         <div class="view"><i class="fa fa-eye"></i> 9141</div>
@@ -143,7 +143,7 @@
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-6">
                                 <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="fontend/img/popular/movie-8.png">
+                                    <div class="product__item__pic set-bg" data-setbg="users/img/popular/movie-8.png">
                                         <div class="ep">HD</div>
                                         <div class="comment"><i class="fa fa-comments"></i> 11</div>
                                         <div class="view"><i class="fa fa-eye"></i> 9141</div>

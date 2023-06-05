@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\FontEnd\User;
+namespace App\Http\Controllers\Users\Account;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -10,7 +10,7 @@ class loginController extends Controller
 {
     public function get_login()
     {
-        return view('fontend.page.user.login');
+        return view('users.page.account.login');
     }
     public function post_login(Request $request)
 {

@@ -2,11 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\Fontend\homeController;
+use App\Http\Controllers\Users\homeController;
 
-use App\Http\Controllers\Fontend\User\registerController;
-use App\Http\Controllers\Fontend\User\loginController;
-use App\Http\Controllers\Fontend\User\logoutController;
+use App\Http\Controllers\Users\Account\registerController;
+use App\Http\Controllers\Users\Account\loginController;
+use App\Http\Controllers\Users\Account\logoutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -59,11 +59,11 @@ Route::prefix('auth')->group(function () {
 */
 
 Route::get('/ss', function () {
-    return view('backend.page/movie/index');
+    return view('admin.page/movie/index');
 });
 
 Route::get('/s', function () {
-    return view('backend.page/movie/edit');
+    return view('admin.page/movie/edit');
 });
 
 

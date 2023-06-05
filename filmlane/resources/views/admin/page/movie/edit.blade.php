@@ -1,5 +1,5 @@
 <!-- resources/views/movies/index.blade.php -->
-@extends('backend.layout.app')
+@extends('admin.layout.app')
 @section('content')
     <div class="container-xxl flex-grow-1 container-p-y">
 

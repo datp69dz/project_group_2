@@ -18,14 +18,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="../fontend/css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="../fontend/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="../fontend/css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="../fontend/css/plyr.css" type="text/css">
-    <link rel="stylesheet" href="../fontend/css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="../fontend/css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="../fontend/css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="../fontend/css/style.css" type="text/css">
+    <link rel="stylesheet" href="../users/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="../users/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="../users/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="../users/css/plyr.css" type="text/css">
+    <link rel="stylesheet" href="../users/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="../users/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="../users/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="../users/css/style.css" type="text/css">
 </head>
 
 <body>
@@ -36,13 +36,13 @@
 
 
     <!-- Phần đầu trang -->
-    @include('../fontend.includes.header')
+    @include('../users.includes.header')
 
     <!-- Nội dung chính -->
     @yield('content')
 
     <!-- Phần cuối trang -->
-    @include('../fontend.includes.footer')
+    @include('../users.includes.footer')
     <div></div>
 
   <!-- Search model Begin -->
@@ -57,14 +57,14 @@
 <!-- Search model end -->
 
 <!-- Js Plugins -->
-<script src="../fontend/js/jquery-3.3.1.min.js"></script>
-<script src="../fontend/js/bootstrap.min.js"></script>
-<script src="../fontend/js/player.js"></script>
-<script src="../fontend/js/jquery.nice-select.min.js"></script>
-<script src="../fontend/js/mixitup.min.js"></script>
-<script src="../fontend/js/jquery.slicknav.js"></script>
-<script src="../fontend/js/owl.carousel.min.js"></script>
-<script src="../fontend/js/main.js"></script>
+<script src="../users/js/jquery-3.3.1.min.js"></script>
+<script src="../users/js/bootstrap.min.js"></script>
+<script src="../users/js/player.js"></script>
+<script src="../users/js/jquery.nice-select.min.js"></script>
+<script src="../users/js/mixitup.min.js"></script>
+<script src="../users/js/jquery.slicknav.js"></script>
+<script src="../users/js/owl.carousel.min.js"></script>
+<script src="../users/js/main.js"></script>
 
 
 </body>

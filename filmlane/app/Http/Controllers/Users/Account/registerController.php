@@ -1,7 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\FontEnd\User;
-
+namespace App\Http\Controllers\Users\Account;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Account; // Update the model import statement
@@ -12,7 +11,7 @@ class registerController extends Controller
     //
     public function get_register()
     {
-        return view('fontend.page.user.register');
+        return view('users.page.account.register');
     }
 
     public function post_register(Request $request)
