@@ -2821,3 +2821,47 @@ ol {
 	margin-bottom: 10px;
 	text-align: center;
   }
+
+
+  .btn {
+	padding: 10px 20px;
+	border: none;
+	cursor: pointer;
+}
+
+.btn.selected {
+	color: #fff;
+	outline: none;
+	box-shadow: none;
+	content: "\2713";
+	/* Dấu tích Unicode */
+	background-color: #4CAF50;
+	
+
+}
+.btn.selected::after {
+	content: "\2713"; /* Dấu tích Unicode */
+	margin-left: 5px;
+  }
+
+
+.btn-submit-pay {
+	float: right;
+	background-color: rgb(237, 136, 13);
+	color: aliceblue;
+	margin: 25px 0;
+	margin-bottom: 125px;
+}
+.alert-danger {
+	color: #d4d1d1;
+	background-color: #dc2d2d;
+	border-color: #f5c6cb;
+	padding-left: 170px;
+}
+.alert {
+    border: none;
+}
+.button_login{
+    padding: 3px 7px;
+	background-color: #111111;
+}

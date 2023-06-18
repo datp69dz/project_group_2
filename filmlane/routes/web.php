@@ -7,6 +7,7 @@ use App\Http\Controllers\Users\homeController;
 use App\Http\Controllers\Users\Account\registerController;
 use App\Http\Controllers\Users\Account\loginController;
 use App\Http\Controllers\Users\Account\logoutController;
+use App\Http\Controllers\Users\premium_Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,11 +47,18 @@ Route::middleware('web')->group(function () {
     Route::get('/logout', [logoutController::class, 'logout'])->name('logout');
 
 });
+
+Route::get('/', [premium_Controller::class, 'index'])->name('premium');
+
 // route chuc nang tai khoan nguoi dung //
 Route::prefix('auth')->group(function () {
 
 });
 
+use App\Http\Controllers\Users\Pay\PayController;
+Route::get('/pay', [PayController::class, 'getpay'])->name('pay.index');
+Route::post('/pay', [PayController::class, 'postpay'])->name('postpay');
+Route::get('/display', [PayController::class, 'display'])->name('display');
 
 /*
 |--------------------------------------------------------------------------

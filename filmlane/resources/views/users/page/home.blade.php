@@ -1,14 +1,13 @@
 <!-- resources/views/movies/index.blade.php -->
 @extends('users.layout.app')
 @section('content')
+    @if (isset($message))
+        <div class="alert">
+            <p>{{ $message }}</p>
+        </div>
+    @endif
 
-@if(isset($message))
-    <div class="alert">
-        <p>{{ $message }}</p>
-    </div>
-@endif
-
-<!-- Nội dung trang web -->
+    <!-- Nội dung trang web -->
 
     <!-- Product Section Begin -->
     <section class="product spad">
@@ -162,4 +161,75 @@
                 </div>
             </div>
         </div>
+
+
+
+        <!-- Product Section End -->
+        <section style="  background: url(users/img/service-bg.jpg) no-repeat;background-size: cover;background-position: center;padding-block: var(--section-padding);"
+            class="service">
+            <div class="container ss">
+                <div class="row">
+                    <div class="service-banner col-lg-6 col-md-6 col-sm-12">
+                        <figure>
+                            <img src="users/img/service-banner.jpg" alt="HD 4k resolution! only $3.99">
+                        </figure>
+                    </div>
+                    <div style="padding-left: 30px;" class="service-content col-lg-6 col-md-6 col-sm-12">
+
+                        <p class="service-subtitle">Our Services</p>
+
+                        
+                        <h2 class="h2 service-h2 service-title"> <a style="color:#fff" href="{{route('premium')}}">Upgrade your premium account to enjoy more benefits</a> </h2>
+
+                        <p class="service-text">
+                            Welcome to our premium account! Unlock a world of unlimited movie content and experience the
+                            highest quality films like never before. Enjoy limitless streaming and indulge in the finest
+                            cinematic entertainment available.
+                        </p>
+
+                        <ul class="service-list">
+
+                            <li>
+                                <div class="service-card">
+
+                                    <div class="card-icon">
+                                        <i class="fa fa-hdd-o" aria-hidden="true"></i>
+                                    </div>
+
+                                    <div class="card-content">
+                                        <h3 class="h3 service-h3 card-title">Enjoy on Your TV.</h3>
+
+                                        <p class="card-text">
+                                            Lorem ipsum dolor sit amet, consecetur adipiscing elit, sed do eiusmod tempor.
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="service-card">
+
+                                    <div class="card-icon">
+                                        <i class="fa fa-television" aria-hidden="true"></i>
+                                    </div>
+
+                                    <div class="card-content">
+                                        <h3 class="h3 service-h3 card-title">Watch Everywhere.</h3>
+
+                                        <p class="card-text">
+                                            Lorem ipsum dolor sit amet, consecetur adipiscing elit, sed do eiusmod tempor.
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
     @endsection

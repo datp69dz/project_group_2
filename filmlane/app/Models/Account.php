@@ -19,6 +19,26 @@ class Account extends Model implements Authenticatable
         'account_update',
     ];
 
+     public function payments()
+    {
+        return $this->hasMany(Payment::class, 'account_id', 'account_id');
+    }
+
+    public function favorites()
+    {
+        return $this->belongsToMany(Movie::class, 'favorites', 'account_id', 'movie_id');
+    }
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class, 'account_id', 'account_id');
+    }
+
+    public function reviews()
+    {
+        return $this->hasMany(Review::class, 'account_id', 'account_id');
+    }
+
     public $timestamps = false; // Vô hiệu hóa các trường timestamps mặc định (created_at, updated_at)
 
     protected $dates = [
