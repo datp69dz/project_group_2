@@ -36,7 +36,6 @@ body {
 	height: 100%;
 	font-family: "Mulish", sans-serif;
 	-webkit-font-smoothing: antialiased;
-	background: hsl(207deg 20.46% 8.11%);
 }
 
 h1,
@@ -134,7 +133,7 @@ ol {
 	top: -6px;
 	height: 32px;
 	width: 4px;
-	background: #e53637;
+	background: #e50914;
 	content: "";
 }
 
@@ -144,10 +143,6 @@ ol {
 	background-position: top center;
 }
 
-.spad {
-	padding-top: 70px;
-	padding-bottom: 70px;
-}
 
 .login__form_a:after {
 	position: absolute;
@@ -194,7 +189,7 @@ ol {
 .site-btn {
 	font-size: 13px;
 	color: #ffffff;
-	background: #e53637;
+	background: #e50914;
 	font-weight: 700;
 	border: none;
 	border-radius: 2px;
@@ -361,7 +356,7 @@ ol {
 }
 
 .header__menu ul li.active a {
-	background: #e53637;
+	background: #e50914;
 	color: #ffffff;
 }
 
@@ -468,7 +463,7 @@ ol {
 
 .hero__text .label {
 	font-size: 13px;
-	color: #e53637;
+	color: #e50914;
 	background: #ffffff;
 	padding: 5px 14px 3px;
 	display: inline-block;
@@ -520,7 +515,7 @@ ol {
 .hero__text a span {
 	font-size: 13px;
 	color: #ffffff;
-	background: #e53637;
+	background: #e50914;
 	display: inline-block;
 	font-weight: 700;
 	letter-spacing: 2px;
@@ -533,7 +528,7 @@ ol {
 .hero__text a i {
 	font-size: 20px;
 	display: inline-block;
-	background: #e53637;
+	background: #e50914;
 	padding: 11px 5px 16px 8px;
 	color: #ffffff;
 	border-radius: 0 4px 4px 0;
@@ -651,7 +646,7 @@ ol {
 	  --text-color-light: hsl(var(--hue-color), 12%, 65%);
 	  --white-color: #FFF;
 	  --body-color: hsl(var(--hue-color), 100%, 99%);
-	  --container-color: hsl(193, 31%, 6%);
+	  --container-color: hsl(0, 0%, 0%);
 	
 	  /*========== Font and typography ==========*/
 	  --biggest-font-size: 1.75rem;
@@ -729,7 +724,7 @@ ol {
 	  background-color: var(--container-color);
 	  padding: 2rem 1.5rem 2.5rem;
 	  border-radius: 0.5rem;
-	  box-shadow: 0 12px 24px hsla(var(--hue-color), 61%, 16%, 0.1);
+	  box-shadow: 0 0 10px rgba(67, 69, 70, 0.5);
 	  transition: .4s;
 	}
 	
@@ -767,7 +762,7 @@ ol {
 	
 	.card__pricing {
 	  position: absolute;
-	  background: #e53637;
+	  background: #e50914;
 	  width: 60px;
 	  height: 88px;
 	  right: 1.5rem;
@@ -843,7 +838,7 @@ ol {
 	  border: none;
 	  font-size: var(--normal-font-size);
 	  border-radius: .5rem;
-	  background: #e53637;
+	  background: #e50914;
 	  color: var(--white-color);
 	  cursor: pointer;
 	  transition: .4s;
@@ -948,7 +943,7 @@ ol {
 .product__item__pic .ep {
 	font-size: 13px;
 	color: #ffffff;
-	background: #e53637;
+	background: #e50914;
 	display: inline-block;
 	padding: 2px 12px;
 	border-radius: 4px;
@@ -1022,7 +1017,7 @@ ol {
 	top: -6px;
 	height: 32px;
 	width: 4px;
-	background: #e53637;
+	background: #e50914;
 	content: "";
 }
 
@@ -1064,7 +1059,7 @@ ol {
 .product__sidebar__view__item .ep {
 	font-size: 13px;
 	color: #ffffff;
-	background: #e53637;
+	background: #e50914;
 	display: inline-block;
 	padding: 2px 12px;
 	border-radius: 4px;
@@ -1352,7 +1347,7 @@ ol {
 .anime__details__btn .follow-btn {
 	font-size: 13px;
 	color: #ffffff;
-	background: #e53637;
+	background: #e50914;
 	display: inline-block;
 	font-weight: 700;
 	letter-spacing: 2px;
@@ -1365,7 +1360,7 @@ ol {
 .anime__details__btn .watch-btn span {
 	font-size: 13px;
 	color: #ffffff;
-	background: #e53637;
+	background: #e50914;
 	display: inline-block;
 	font-weight: 700;
 	letter-spacing: 2px;
@@ -1378,7 +1373,7 @@ ol {
 .anime__details__btn .watch-btn i {
 	font-size: 20px;
 	display: inline-block;
-	background: #e53637;
+	background: #e50914;
 	padding: 11px 5px 16px 8px;
 	color: #ffffff;
 	border-radius: 0 4px 4px 0;
@@ -1460,7 +1455,7 @@ ol {
 	font-weight: 700;
 	letter-spacing: 2px;
 	text-transform: uppercase;
-	background: #e53637;
+	background: #e50914;
 	border: none;
 	padding: 10px 15px;
 	border-radius: 2px;
@@ -1594,7 +1589,7 @@ ol {
 
 .breadcrumb__links a i {
 	margin-right: 5px;
-	color: #e53637;
+	color: #e50914;
 }
 
 .breadcrumb__links a:after {
@@ -1691,7 +1686,7 @@ ol {
 }
 
 .blog__item__text p span {
-	color: #e53637;
+	color: #e50914;
 	margin-right: 5px;
 }
 
@@ -1921,7 +1916,7 @@ ol {
 }
 
 .blog__details__comment__item__text a:hover {
-	background: #e53637;
+	background: #e50914;
 }
 
 .blog__details__form {
@@ -2004,10 +1999,6 @@ ol {
   Login
 -----------------------*/
 
-.login {
-	padding-top: 130px;
-	padding-bottom: 120px;
-}
 
 .login__form {
 	position: relative;
@@ -2102,7 +2093,7 @@ ol {
 }
 
 .login__register .primary-btn {
-	background: #e53637;
+	background: #e50914;
 	padding: 12px 42px;
 }
 
@@ -2181,7 +2172,7 @@ ol {
 }
 
 .signup .login__form h5 a {
-	color: #e53637;
+	color: #e50914;
 	font-weight: 700;
 }
 
@@ -2227,7 +2218,7 @@ ol {
 	color: #ffffff;
 	height: 50px;
 	width: 50px;
-	background: #e53637;
+	background: #e50914;
 	line-height: 50px;
 	text-align: center;
 	border-radius: 50%;
@@ -2268,7 +2259,7 @@ ol {
 }
 
 .footer__copyright__text a {
-	color: #e53637;
+	color: #e50914;
 }
 
 /*--------------------------------- Responsive Media Quaries -----------------------------*/
@@ -2623,7 +2614,6 @@ ol {
 	background: url("../images/service-bg.jpg") no-repeat;
 	background-size: cover;
 	background-position: center;
-	padding-block: var(--section-padding);
   }
   
   .service-banner {
@@ -2864,4 +2854,7 @@ ol {
 .button_login{
     padding: 3px 7px;
 	background-color: #111111;
+}
+.card__content>grid{
+	background-color: hsl(0deg 0% 28.03% / 24%);
 }

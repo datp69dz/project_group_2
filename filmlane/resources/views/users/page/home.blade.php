@@ -10,7 +10,7 @@
     <!-- Nội dung trang web -->
 
     <!-- Product Section Begin -->
-    <section class="product spad">
+    <section  style="padding-bottom:0"class="product spad">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -179,7 +179,7 @@
                         <p class="service-subtitle">Our Services</p>
 
                         
-                        <h2 class="h2 service-h2 service-title"> <a style="color:#fff" href="{{route('premium')}}">Upgrade your premium account to enjoy more benefits</a> </h2>
+                        <h2 class="h2 service-h2 service-title"> <a style="color:#fff" href="{{route('pay.index')}}">Upgrade your premium account to enjoy more benefits</a> </h2>
 
                         <p class="service-text">
                             Welcome to our premium account! Unlock a world of unlimited movie content and experience the

@@ -10,7 +10,7 @@ class AdminAccount extends Model
     protected $primaryKey = 'admin_id';
     public $timestamps = false;
 
-    protected $fillable = ['username', 'password', 'email', 'image' , 'admin_date' , 'admin_update'];
+    protected $fillable = ['admin_username', 'password', 'email', 'image' , 'admin_date' , 'admin_update'];
 
     protected $dates = [
         'admin_date',

@@ -4,8 +4,8 @@
         <div class="row">
             <div class="col-lg-2">
                 <div class="header__logo">
-                    <a href="./index.html">
-                        <img src="../fontend/img/logo.png" alt="">
+                    <a href="{{route('home')}}">
+                        <img style="height:35px" src="users/img/logo.svg" alt="">
                     </a>
 
                 </div>
@@ -14,7 +14,7 @@
                 <div class="header__nav">
                     <nav class="header__menu mobile-menu">
                         <ul>
-                            <li class="active"><a href="./index.html">Homepage</a></li>
+                            <li class="active"><a href="{{route('home')}}">Homepage</a></li>
                             <li><a href="./categories.html">Categories <span class="arrow_carrot-down"></span></a>
                                 <ul class="dropdown">
                                     <li><a href="./categories.html">Categories</a></li>
