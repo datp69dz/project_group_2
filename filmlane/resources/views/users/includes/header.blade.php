@@ -32,33 +32,22 @@
                 </div>
             </div>
 
- 
+ <?php $user = Auth::user(); ?>
 
             <div class="col-lg-2">
                 <div class="header__right" style="display: flex; align-items: center;">
                     <a href="#" class="search-switch"><span class="icon_search"></span></a>
                     @if (session('user'))
-                        <div style="display: flex; align-items: center;" onmouseenter="showLogout()" onmouseleave="hideLogout()">
-                            <img style="width:40px ; height:30px; margin-right: 10px;" src="{{ session('user')->image }}" alt="{{ session('user')->username }}">
-                            <span style="margin-right: 10px;">{{ session('user')->username }}</span>
-                            <a style="font-size: 15px" href="{{ route('logout') }}" style="margin-left: 10px; display: none;" id="logoutLink">Logout</a>
+                    <a href="{{ route('account.show') }}">
+                        <div style="display: flex; align-items: center;">
+                            <img style="width:40px ; height:30px; margin-right: 10px;" src="{{ asset('storage/uploads/users/' . $user->image)  }}">
+                            <span style="margin-right: 10px; font-size:16px">{{ session('user')->username }}</span>
                         </div>
+                    </a>
                     @else
                         <a href="{{ route('get_login') }}"><span class="icon_profile"></span></a>
                     @endif
                 </div>
-                
-                <script>
-                    function showLogout() {
-                        const logoutLink = document.getElementById('logoutLink');
-                        logoutLink.style.display = 'inline-block';
-                    }
-                
-                    function hideLogout() {
-                        const logoutLink = document.getElementById('logoutLink');
-                        logoutLink.style.display = 'none';
-                    }
-                </script>
             </div>
 
             

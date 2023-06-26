@@ -28,6 +28,8 @@ class Account extends Model implements Authenticatable, CanResetPassword
         'account_update',
     ];
 
+    
+
     public function payments()
     {
         return $this->hasMany(Payment::class, 'account_id', 'account_id');
