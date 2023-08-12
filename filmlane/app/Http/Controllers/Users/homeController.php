@@ -1,15 +1,30 @@
 <?php
 
 namespace App\Http\Controllers\Users;
-
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Movies;
 
 class homeController extends Controller
 {
-    public function home(){
+    public function home(Request $request){
 
-        return view('users.page/home');
+        $perPage = 8; // Số lượng mục trên mỗi trang
+        $currentPage = $request->get('page', 1); // Trang hiện tại, mặc định là trang 1
+        $movies = Movies::skip(($currentPage - 1) * $perPage)
+            ->take($perPage)
+            ->get();
+        $totalMovies = Movies::count();
+        $lastPage = ceil($totalMovies / $perPage);
+        return view('users.page.home', compact('movies', 'currentPage', 'lastPage'));
         
     }
+       
+    public function show($id){
+        // gọi tất cả thông tin theo id
+        $movies = movies::findOrFail($id);
+        // Hiển thị chi tiết phim
+        return view('users.page/moviesdetail', compact('movies'));
+    }
+    
 }
