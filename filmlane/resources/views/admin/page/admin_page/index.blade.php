@@ -1,55 +1,47 @@
 <!-- resources/views/movies/index.blade.php -->
 @extends('admin.layout.app')
 @section('content')
-<div class="container-xxl flex-grow-1 container-p-y">
-<!-- Bootstrap Table with Header - Light -->
-<a href="{{ route('admin-accounts.create') }}" class="btn btn-primary">Thêm tài khoản</a>
-<div class="card">
-  <h5 class="card-header">Manager movies</h5>
-  <div class="table-responsive text-nowrap">
+<!-- resources/views/admins/index.blade.php -->
+
+@extends('layouts.app')
+
+@section('content')
+<!-- resources/views/accounts/index.blade.php -->
+
+@extends('layouts.app')
+
+@section('content')
+    <h1>Account List</h1>
+    <a href="{{ route('accounts.create') }}" class="btn btn-primary">Create Account</a>
     <table class="table">
-      <thead class="table-light">
-        <tr>
-          <th>Username</th>
-          <th>Email</th>
-          <th>Ngày tạo</th>
-          <th>Ngày cập nhật</th>
-          <th>Thao tác</th>
-      </tr>
-      </thead>
-      <tbody class="table-border-bottom-0">
-
-        @foreach ($adminAccounts as $adminAccount)
-
-        <tr>
-          <td>{{ $adminAccount->admin_username }}</td>
-                        <td>{{ $adminAccount->email }}</td>
-                        <td>{{ $adminAccount->admin_date }}</td>
-                        <td>{{ $adminAccount->admin_update }}</td>
-                        <td>
-                        <a href="{{ route('admin-accounts.show', $adminAccount->admin_id) }}" class="btn btn-info">Xem</a>
-                        <a href="{{ route('admin-accounts.edit', $adminAccount->admin_id) }}" class="btn btn-warning">Chỉnh sửa</a>
-                        <form action="{{ route('admin-accounts.destroy', $adminAccount->admin_id) }}" method="POST" style="display: inline">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($accounts as $account)
+                <tr>
+                    <td>{{ $account->account_id }}</td>
+                    <td>{{ $account->username }}</td>
+                    <td>{{ $account->email }}</td>
+                    <td>
+                        <a href="{{ route('accounts.show', $account->account_id) }}" class="btn btn-info">View</a>
+                        <a href="{{ route('accounts.edit', $account->account_id) }}" class="btn btn-warning">Edit</a>
+                        <form action="{{ route('accounts.destroy', $account->account_id) }}" method="POST" class="d-inline">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa tài khoản này?')">Xóa</button>
+                            <button type="submit" class="btn btn-danger">Delete</button>
                         </form>
-                     </td>
-        </tr>
-
-        @endforeach
-      </tbody>
+                    </td>
+                </tr>
+            @endforeach
+        </tbody>
     </table>
-  </div>
-</div>
+@endsection
 
-<div class="buy-now">
-    <a
-      href="https://themeselection.com/products/sneat-bootstrap-html-admin-template/"
-      target="_blank"
-      class="btn btn-danger btn-buy-now"
-      >Create New Movie</a
-    >
-  </div></div>
 
 @endsection

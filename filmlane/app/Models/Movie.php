@@ -10,12 +10,17 @@ class Movie extends Model
     protected $primaryKey = 'movie_id';
     public $timestamps = false;
 
-    protected $fillable = ['title', 'description', 'release_date', 'category_id', 'trailer_url', 'image_url', 'movie_url', 'time', 'director', 'main_actor', 'status', 'nation', 'quality', 'year_manufacture', 'view', 'admin_id' ,'movie_date', 'movie_update' ];
+    protected $fillable = [
+        'title', 'description', 'release_date', 'category_id', 'trailer_url',
+        'image_url', 'movie_url', 'time', 'director', 'main_actor', 'status',
+        'nation', 'quality', 'year_manufacture', 'view', 'admin_id', 'movie_date', 'movie_update'
+    ];
 
     protected $dates = [
         'movie_date',
         'movie_update',
     ];
+
     public function category()
     {
         return $this->belongsTo(Category::class, 'category_id', 'category_id');

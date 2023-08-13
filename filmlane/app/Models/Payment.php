@@ -6,6 +6,8 @@ class Payment extends Model
 {
     protected $table = 'payments'; // Tên bảng trong cơ sở dữ liệu
 
+    protected $primaryKey = 'payment_id';
+
     protected $fillable = [
         'account_id',
         'account_money',
@@ -26,6 +28,11 @@ class Payment extends Model
     public function user()
     {
         return $this->belongsTo(User::class, 'account_id', 'id');
+    }
+
+    public function account()
+    {
+        return $this->belongsTo(Account::class, 'account_id', 'account_id');
     }
 }
 

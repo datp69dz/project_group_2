@@ -4,8 +4,43 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class AdminAccount extends Model
+
+use Illuminate\Contracts\Auth\Authenticatable;
+
+class AdminAccount extends Model implements Authenticatable
 {
+    // ...
+    
+    public function getAuthIdentifierName()
+    {
+        return 'admin_id'; // Thay thế bằng khóa chính của bảng admin_accounts
+    }
+
+    public function getAuthIdentifier()
+    {
+        return $this->{$this->getAuthIdentifierName()};
+    }
+
+    public function getAuthPassword()
+    {
+        return $this->password;
+    }
+
+    public function getRememberToken()
+    {
+        return null; // Không sử dụng "remember_token"
+    }
+
+    public function setRememberToken($value)
+    {
+        // Không sử dụng "remember_token"
+    }
+
+    public function getRememberTokenName()
+    {
+        return null; // Không sử dụng "remember_token"
+    }
+
     protected $table ='admin_accounts';
     protected $primaryKey = 'admin_id';
     public $timestamps = false;
@@ -15,7 +50,7 @@ class AdminAccount extends Model
     protected $dates = [
         'admin_date',
         'admin_update',
-    ];
+    ];  
 
     public function movies()
     {
@@ -26,4 +61,5 @@ class AdminAccount extends Model
     {
         return $this->hasMany(Comment::class, 'admin_id', 'admin_id');
     }
+    
 }

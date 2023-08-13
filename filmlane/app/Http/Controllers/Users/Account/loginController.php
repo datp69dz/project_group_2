@@ -30,10 +30,11 @@ class loginController extends Controller
         // Xác thực thành công
         $user = Auth::user();
         $request->session()->put('user', $user);
-        return redirect()->route('home');
+        return redirect()->route('home')->with('success', 'Login successful!');
     } else {
         // Xác thực thất bại
-        return redirect()->route('get_login')->with('error', 'Invalid credentials');
+        return redirect()->route('get_login')->withErrors(['login' => 'Email account or password is wrong, please re-enter']);
     }
+    
 }
 }

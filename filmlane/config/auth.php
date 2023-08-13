@@ -40,6 +40,11 @@ return [
             'driver' => 'session',
             'provider' => 'accounts', // Đảm bảo rằng giá trị provider là 'accounts'
         ],
+
+        'admin' => [ // Thêm guard "admin"
+            'driver' => 'session',
+            'provider' => 'admin', // Sử dụng provider "admins" để xác thực tài khoản admin
+        ],
     ],
     
 
@@ -65,6 +70,10 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\Account::class,
         ],
+        'admin' => [ // Thêm provider "admins"
+        'driver' => 'eloquent',
+        'model' => App\Models\AdminAccount::class,
+    ],
     
     
 

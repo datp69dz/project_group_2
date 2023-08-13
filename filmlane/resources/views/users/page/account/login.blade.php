@@ -7,21 +7,17 @@
 
 <section style="height:320px " class="normal-breadcrumb set-bg" data-setbg="users/img/wallpapersden.com_godzilla-4k-8k-banner_8000x2335.jpg"></section>
 
-@if ($errors->any())
-<div class="alert alert-danger">
-    <ul>
-        @foreach ($errors->all() as $error)
-            <li>{{ $error }}</li>
-        @endforeach
-    </ul>
-</div>
+
+@if(session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
 @endif
 
-
-@if (session('success'))
-<div class="alert alert-success">
-    {{ session('success') }}
-</div>
+@if($errors->has('login'))
+    <div class="alert alert-danger">
+        {{ $errors->first('login') }}
+    </div>
 @endif
 <div style="  background: url(users/img/service-bg.jpg) no-repeat;background-size: cover;background-position: center;padding-block: var(--section-padding); height:466px">
 
