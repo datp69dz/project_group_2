@@ -3,10 +3,11 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Users\homeController;
-
+use App\http\Controllers\Users\moviess;
 use App\Http\Controllers\Users\Account\registerController;
 use App\Http\Controllers\Users\Account\loginController;
 use App\Http\Controllers\Users\Account\logoutController;
+<<<<<<< HEAD
 use App\Http\Controllers\Users\Account\ForgotPasswordController;
 use App\Http\Controllers\Users\premium_Controller;
 use App\http\Controllers\Users\moviess;
@@ -15,6 +16,8 @@ use App\Http\Controllers\AccountVerificationController;
 use App\Http\Controllers\Admin\AccountController;
 use App\Http\Controllers\Admin\PaymentController;
 use App\Http\Controllers\Admin\CommentController;
+=======
+>>>>>>> 1891aa8efd7aa8a0f0249c39cc0534e8fe69ce62
 
 
 /*
@@ -35,7 +38,13 @@ use App\Http\Controllers\Admin\CommentController;
 |--------------------------------------------------------------------------
 */
 
+<<<<<<< HEAD
 Route::get('/', [homeController::class, 'home'])->name('home');
+=======
+
+Route::get('/home', [homeController::class, 'home'])->name('home');
+
+>>>>>>> 1891aa8efd7aa8a0f0249c39cc0534e8fe69ce62
 
 Route::middleware('web')->group(function () {
     // Các route cần lưu trữ session ở đây
@@ -45,14 +54,12 @@ Route::middleware('web')->group(function () {
     Route::get('/register', [registerController::class, 'get_register'])->name('get_register');
     Route::post('/register', [registerController::class, 'post_register'])->name('post_register');
 
-    Route::get('/forgot-password', [ForgotPasswordController::class, 'showForgotPasswordForm'])->name('password.request');
+    Route::get('/forgot-password', [ForgotPasswordController::class, 'forgotPassword'])->name('password.request');
     Route::post('/forgot-password', [ForgotPasswordController::class, 'sendResetLinkEmail'])->name('password.email');
-    
+
     Route::get('/reset-password/{token}', [ForgotPasswordController::class, 'showResetPasswordForm'])->name('password.reset');
     Route::post('/reset-password', [ForgotPasswordController::class, 'resetPassword'])->name('password.update');
-    
-    Route::get('/login', [LoginController::class, 'get_login'])->name('get_login');
-    
+
     Route::get('/logout', [logoutController::class, 'logout'])->name('logout');
 
     Route::get('/movies', [registerController::class, 'get_movies'])->name('get_movies');
@@ -61,7 +68,10 @@ Route::middleware('web')->group(function () {
     Route::get('/detail', [moviess::class, 'get_detail'])->name('get_detail');
 
     Route::get('/watch/{id}', [moviess::class, 'watch'])->name('movies.watch');
+<<<<<<< HEAD
     Route::get('/watch/{id}', [moviess::class, 'watch'])->name('movies.watch');
+=======
+>>>>>>> 1891aa8efd7aa8a0f0249c39cc0534e8fe69ce62
 
     Route::get('/trailler/{id}', [moviess::class, 'trailler'])->name('trailler.watch');
 
@@ -75,6 +85,7 @@ Route::middleware('web')->group(function () {
 
     Route::get('/random-movies', [moviess::class, 'randomMovies'])->name('random.movies');
 
+<<<<<<< HEAD
     Route::post('/comment', [moviess::class, 'comment'])->name('comment');
 
     Route::get('/manager_account', [AccountMangerController::class, 'show'])->name('account.show');
@@ -104,33 +115,23 @@ Route::get('/api/category/{category_id}', function ($category_id) {
 
 
 
+=======
+    Route::post('/comment', [moviess::class, 'comment'])->middleware('auth')->name('comment');
+
+
+});
+>>>>>>> 1891aa8efd7aa8a0f0249c39cc0534e8fe69ce62
 // route chuc nang tai khoan nguoi dung //
 Route::prefix('auth')->group(function () {
 
 });
 
-Route::get('/account/verify/{token}', [AccountVerificationController::class, 'verify'])->name('account.verify');
-
-
-use App\Http\Controllers\Users\Pay\PayController;
-Route::get('/pay', [PayController::class, 'getpay'])->name('pay.index');
-Route::post('/pay', [PayController::class, 'postpay'])->name('postpay');
-Route::get('/display', [PayController::class, 'display'])->name('display');
 
 /*
 |--------------------------------------------------------------------------
 | BACK END ROUTE
 |--------------------------------------------------------------------------
 */
-use App\Http\Controllers\Admin\Admin_page\AdminAccountController;
-
-Route::get('/admin-accounts', [AdminAccountController::class, 'index'])->name('admin-accounts.index');
-Route::get('/admin-accounts/create', [AdminAccountController::class, 'create'])->name('admin-accounts.create');
-Route::post('/admin-accounts', [AdminAccountController::class, 'store'])->name('admin-accounts.store');
-Route::get('/admin-accounts/{id}', [AdminAccountController::class, 'show'])->name('admin-accounts.show');
-Route::get('/admin-accounts/{id}/edit', [AdminAccountController::class, 'edit'])->name('admin-accounts.edit');
-Route::put('/admin-accounts/{id}', [AdminAccountController::class, 'update'])->name('admin-accounts.update');
-Route::delete('/admin-accounts/{id}', [AdminAccountController::class, 'destroy'])->name('admin-accounts.destroy');
 
 Route::get('/ss', function () {
     return view('admin.page/movie/index');
@@ -140,13 +141,6 @@ Route::get('/s', function () {
     return view('admin.page/movie/edit');
 });
 
-Route::get('/demo', function () {
-    return view('users.page.account.verification');
-});
-
-Route::get('/sa', function () {
-    return view('users.page.account.manager-account');
-});
 
 
 // routes/web.php

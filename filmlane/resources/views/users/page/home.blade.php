@@ -1,17 +1,31 @@
+
 <!-- resources/views/movies/index.blade.php -->
 @extends('users.layout.app')
 @section('content')
+<<<<<<< HEAD
     <script src="{{ asset('users/js/scripts.js') }}"></script>
     @if (isset($message))
         <div class="alert">
             <p>{{ $message }}</p>
         </div>
     @endif
+=======
+>>>>>>> 1891aa8efd7aa8a0f0249c39cc0534e8fe69ce62
 
-    <!-- Nội dung trang web -->
+@if(isset($message))
+    <div class="alert">
+        <p>{{ $message }}</p>
+    </div>
+@endif
+
+<!-- Nội dung trang web -->
 
     <!-- Product Section Begin -->
+<<<<<<< HEAD
     <section style="padding-bottom:0;background-color:#101519"class="product spad">
+=======
+    <section class="product spad">
+>>>>>>> 1891aa8efd7aa8a0f0249c39cc0534e8fe69ce62
         <div class="container">
 
             <section style="padding-bottom:0"class="product spad">
@@ -45,6 +59,7 @@
 
                             </div>
                         </div>
+<<<<<<< HEAD
                     </nav>
                 </div>
 
@@ -94,6 +109,31 @@
                                 @endforeach
                             </div>
                             
+=======
+                        <div class="row">
+                            @foreach ($movies as $movie)
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="users/img/popular/{{ $movie->image_url }}">
+                                        <div class="ep">{{ $movie->quality }}</div>
+                                        <div class="comment"><i class="fa fa-comments"></i>{{ $movie->quality }}</div>
+                                        <div class="view"><i class="fa fa-eye"></i>{{ $movie->view }}</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <ul>
+                                            <li>{{ $movie->category->category_name }}</li>
+                                            <li>Movie</li>
+                                        </ul>
+                                        <h5><a href="{{ route('movies.show', ['id' => $movie->movie_id]) }}">Detail</a>
+                                        </h5>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            @endforeach
+                            <!-- Hiển thị liên kết phân trang -->
+>>>>>>> 1891aa8efd7aa8a0f0249c39cc0534e8fe69ce62
                             @if ($lastPage > 1)
                             <div style="width: 130px; height: 34px; text-align:right; background-color:#e50914">
                                 <ul style="padding-top:5px" class="pagination">
@@ -112,13 +152,17 @@
                                 </ul>
                         </div>
                         @endif
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1891aa8efd7aa8a0f0249c39cc0534e8fe69ce62
                         </div>
                     </div>
                 </div>
 
         </div>
         </div>
+<<<<<<< HEAD
         <!-- Product Section End -->
         <section
             style="  background: url(users/img/service-bg.jpg) no-repeat;background-size: cover;background-position: center;padding-block: var(--section-padding);"
@@ -190,4 +234,6 @@
 
             </div>
         </section>
+=======
+>>>>>>> 1891aa8efd7aa8a0f0249c39cc0534e8fe69ce62
     @endsection

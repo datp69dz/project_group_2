@@ -1,17 +1,25 @@
 <?php
 
 namespace App\Http\Controllers\users;
+<<<<<<< HEAD
 use App\Models\Movie;
+=======
+use App\Models\movies;
+>>>>>>> 1891aa8efd7aa8a0f0249c39cc0534e8fe69ce62
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Comment;
+<<<<<<< HEAD
 use App\Models\Payment;
+=======
+>>>>>>> 1891aa8efd7aa8a0f0249c39cc0534e8fe69ce62
 use Illuminate\Support\Facades\Auth;
 
 class moviess extends Controller 
 {
     public function show($id){
+<<<<<<< HEAD
 // Gọi thông tin phim theo id
 $movie = Movie::find($id);
 // Lấy danh sách comment cho phim hiện tại
@@ -108,6 +116,30 @@ if ($movieStatus === 'payment_required' && $userPaymentStatus !== '2') {
     {
         // Gọi thông tin phim theo id
         $movie = Movie::find($id);
+=======
+        // gọi tất cả thông tin theo id
+        $movie = movies::find($id);
+        // Hiển thị chi tiết phim
+        return view('users.page.movie_detail', compact('movie'));
+    }
+
+    public function watch(Request $request, $id)
+    {
+        // Gọi thông tin phim theo id
+        $movie = Movies::find($id);
+        // Lấy danh sách comment cho phim hiện tại
+        $comments = $this->CommentsForMovie($id);
+        // Lấy giá trị reviewId từ request (nếu có)
+        $reviewId = $request->input('reviewId');
+        // Hiển thị trang xem phim
+        return view('users.page.movie_watching', compact('movie', 'comments',));
+    }
+
+    public function trailler($id)
+    {
+        // Gọi thông tin phim theo id
+        $movie = Movies::find($id);
+>>>>>>> 1891aa8efd7aa8a0f0249c39cc0534e8fe69ce62
         // Hiển thị trang xem phim
         return view('users.page.movie_trailler', compact('movie'));
     }
@@ -115,7 +147,11 @@ if ($movieStatus === 'payment_required' && $userPaymentStatus !== '2') {
     public function search(Request $request)
 {
     $keyword = $request->input('keyword');
+<<<<<<< HEAD
     $movies = Movie::where('title', 'like', '%' . $keyword . '%')
+=======
+    $movies = Movies::where('title', 'like', '%' . $keyword . '%')
+>>>>>>> 1891aa8efd7aa8a0f0249c39cc0534e8fe69ce62
                    ->orWhere('director', 'like', '%' . $keyword . '%')
                    ->get();
     return view('users.page.search', compact('movies'));
@@ -123,7 +159,11 @@ if ($movieStatus === 'payment_required' && $userPaymentStatus !== '2') {
 
     public function getMoviesByCategory($categoryId)
     {
+<<<<<<< HEAD
         $movies = Movie::where('category_id', $categoryId)->get();
+=======
+        $movies = Movies::where('category_id', $categoryId)->get();
+>>>>>>> 1891aa8efd7aa8a0f0249c39cc0534e8fe69ce62
         return view('users.page.category', compact('movies'));
     }
 
@@ -144,8 +184,12 @@ if ($movieStatus === 'payment_required' && $userPaymentStatus !== '2') {
                 'content' => $request->input('content'),
                 'movie_id' => $movie_id, // Sử dụng thông tin movie_id từ request
                 'account_id' => $user->account_id,
+<<<<<<< HEAD
                 'comments_date' => now(), // Thêm trường comments_date với giá trị hiện tại
                 'comments_update' => now(), // Thêm trường comments_update với giá trị hiện tại
+=======
+                // Các trường khác của comment nếu có
+>>>>>>> 1891aa8efd7aa8a0f0249c39cc0534e8fe69ce62
             ]);
             $comment->save();
             return back()->with('success', 'Comment đã được gửi thành công.');
@@ -187,10 +231,17 @@ if ($movieStatus === 'payment_required' && $userPaymentStatus !== '2') {
 
     public function randomMovies(){
         // Lấy danh sách phim ngẫu nhiên (ví dụ lấy 5 phim)
+<<<<<<< HEAD
         $randomMovies = Movie::inRandomOrder()->limit(5)->get();
 
         return view('users.page.movie_watching', compact('randomMovies'));
     }
 
     
+=======
+        $randomMovies = Movies::inRandomOrder()->limit(5)->get();
+
+        return view('users.page.movie_watching', compact('randomMovies'));
+    }
+>>>>>>> 1891aa8efd7aa8a0f0249c39cc0534e8fe69ce62
 }

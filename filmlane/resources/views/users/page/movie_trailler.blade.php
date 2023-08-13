@@ -24,8 +24,11 @@
                         <!-- Captions are optional -->
                         <track kind="captions" label="English captions" src="#" srclang="en" default />
                     </video>
+<<<<<<< HEAD
                     <h2 style="padding-top:30px; color:#fff; font-size:25px">{{ $movie->title }}</h2>
 \
+=======
+>>>>>>> 1891aa8efd7aa8a0f0249c39cc0534e8fe69ce62
                 </div>
             </div>
         </div>
